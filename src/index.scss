@@ -1,3 +1,5 @@
+/* SET UP */
+
 $bg-color: rgba(150, 150, 150, 1);
 
 $border-left-color: rgba(255, 255, 255, 0.2);
@@ -25,10 +27,6 @@ $cols: 10;
 $rows: 18;
 $tile-size: 20px;
 $border-width: 5px;
-
-* {
-  box-sizing: border-box;
-}
 
 /* Colors */
 .color-0 {
@@ -63,6 +61,12 @@ $border-width: 5px;
   background-color: $color-7;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+* {
+  box-sizing: border-box;
+}
+
 /* Grid Square */
 .grid-square {
   border-style: solid;
@@ -75,9 +79,16 @@ $border-width: 5px;
   border-bottom-color: $border-bottom-color;
 }
 
+/* Grid Board */
 .grid-board {
   display: grid;
   grid-template-columns: repeat($cols, $tile-size);
   grid-gap: 0;
+  align-self: flex-start;
+}
+
+.next-block {
+  display: grid;
+  grid-template-columns: repeat(4, $tile-size);
   align-self: flex-start;
 }
