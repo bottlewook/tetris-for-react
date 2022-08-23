@@ -104,3 +104,54 @@ $border-width: 5px;
   border-right-color: $button-color-r;
   border-bottom-color: $button-color-b;
 }
+
+/* App */
+.App {
+  $col-side: calc($tile-size * 4);
+  $col-center: calc($tile-size * 10);
+  $grid-height: calc($tile-size * 18);
+
+  width: calc($tile-size * (4 + 1 + 10 + 1 + 4));
+  margin: auto;
+  display: grid;
+
+  grid-gap: $tile-size $tile-size;
+  /* Defines three columns of `--col-side`, `--col-center`, and `--col-side` widths. */
+  grid-template-columns: $col-side $col-center $col-side;
+  /* Defines three rows of `100px`, `--grid-height`, and 100px. */
+  grid-template-rows: 100px $grid-height 100px;
+
+  /* This defines the areas on the grid with names: 'h', 'l', 'c', 'r',
+and 'b'. The '.' represents an empty cell on the grid. */
+  grid-template-areas:
+    "h h h"
+    "l c r"
+    ". b .";
+}
+
+/* App-header */
+.App-header {
+  grid-area: h;
+}
+
+/* Next Block */
+.next-block {
+  display: grid;
+  grid-template-columns: repeat(4, $tile-size);
+  align-self: flex-start;
+  grid-area: l; /* Grid area l left column */
+}
+
+/* Grid Board */
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat($cols, $tile-size);
+  grid-gap: 0;
+  align-self: flex-start;
+  grid-area: c; /* Assign to grid area c */
+}
+
+/* score-board */
+.score-board {
+  grid-area: r;
+}
