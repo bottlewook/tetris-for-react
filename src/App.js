@@ -1,6 +1,7 @@
 import "./App.scss";
 import Controls from "./compontents/Controls";
 import GridBoard from "./compontents/GridBoard";
+import MessagePopup from "./compontents/MessagePopup";
 import NextBlock from "./compontents/NextBlock";
 import ScoreBoard from "./compontents/ScoreBoard";
 
@@ -14,6 +15,7 @@ function App() {
       <NextBlock />
       <ScoreBoard />
       <Controls />
+      <MessagePopup />
     </div>
   );
 }
