@@ -155,3 +155,24 @@ and 'b'. The '.' represents an empty cell on the grid. */
 .score-board {
   grid-area: r;
 }
+
+/* controls */
+.controls {
+  grid-area: b;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Control Button */
+.control-button {
+  $size: calc($tile-size * 2.5);
+  width: $size;
+  height: $size;
+  text-align: center;
+  display: block;
+  border-width: 5px;
+  border-top-color: $button-color-t;
+  border-left-color: $button-color-l;
+  border-right-color: $button-color-r;
+  border-bottom-color: $button-color-b;
+}

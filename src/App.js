@@ -1,4 +1,5 @@
 import "./App.scss";
+import Controls from "./compontents/Controls";
 import GridBoard from "./compontents/GridBoard";
 import NextBlock from "./compontents/NextBlock";
 import ScoreBoard from "./compontents/ScoreBoard";
@@ -12,6 +13,7 @@ function App() {
       <GridBoard />
       <NextBlock />
       <ScoreBoard />
+      <Controls />
     </div>
   );
 }
